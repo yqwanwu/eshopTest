@@ -1,0 +1,41 @@
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+#  file: /Users/yangqiang/Desktop/idea/logtest/spring.log
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/eshop?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+  jpa:
+    show-sql: true
+#  redis:
+  #    host: 127.0.0.1
+  #    port: 6379
+#      cluster:
+#        nodes:
+#          - 192.168.0.181:7001
+#          - 192.168.0.181:7002
+#          - 192.168.0.181:7003
+#          - 192.168.0.181:7004
+#          - 192.168.0.181:7005
+#          - 192.168.0.181:7006
+#  cache:
+#    ehcache:
+#      config: classpath:ehcache.xml
+
+#server:
+#  context-path: /taotao/
+mybatis:
+  type-aliases-package: com.test.eshop.inventory.mapper
+  mapper-locations: classpath*:/mapper/*.xml
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+
+
