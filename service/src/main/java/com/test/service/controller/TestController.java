@@ -11,6 +11,10 @@ public class TestController {
     @RequestMapping("/test")
     @ResponseBody
     public String test() {
+        if (1 == 1) {
+            throw new RuntimeException("我错了，我真的错了");
+        }
+
         return "21324324234";
     }
 
